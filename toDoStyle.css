@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&display=swap');
+:root{
+    --main-bg-color: #FFFFFF;
+    --focus-bg-color:  #F2F2F2;
+    --font-family-title: "Bebas Neue", sans-serif;
+    --font-family-body: "Outfit", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-bg-color);
+}
+h1{
+    font-family: var(--font-family-title);
+    font-size: 3rem;
+}
+h3{
+    font-family: var(--font-family-title);
+    font-size: 2rem;
+}
+p,input,button,label{
+    font-family: var(--font-family-body);
+    font-size: medium;
+}
+#toDo_container{
+    text-align: center;
+    padding: 2rem;
+}
+#input_container{
+    padding: 1rem;
+}
+#todo_input{
+    border: none;
+    border-bottom: 2px solid #D96281;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    width: 25rem;
+    transition: all 0.3s ease-in-out;
+}
+#todo_input:focus{
+    outline: none;
+    background-color: var(--focus-bg-color);
+}
+#add_task{
+    padding: 0.5rem;
+    background-color: #70BF5A;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#add_task:hover{
+    background-color: #97DB78;
+}
+#details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5rem;
+    margin: auto;
+    background-color: #D96281;
+    border-radius: 0.5rem;
+    width: 60rem;
+}
+.task{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: start;
+    margin: auto;
+    border-radius: 0.5rem;
+    width: 60rem;
+    padding: 1rem;
+}
+.task p{
+    width: 40rem;
+}
+.task:nth-child(odd){
+    background-color: var(--focus-bg-color);
+}
+.btn_container{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+.btn_actions{
+    width: 3rem;
+    height: 2rem;
+    padding: 0.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn_actions--complete{
+    background-color: #70BF5A;
+}
+.btn_actions--complete:hover{
+    background-color: #97DB78;
+}
+.btn_actions--edit{
+    background-color: #72C1F2;
+}
+.btn_actions--edit:hover{
+    background-color: #ACEBF2;
+}
+.btn_actions--delete{
+    background-color: #EC2634;
+}
+.btn_actions--delete:hover{
+    background-color: #F25244;
+}
+.complete_task{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/*Estilo de modal*/
+
+#modal_container{
+   /*  Por defecto, estará oculto */
+    display: none; 
+    position: absolute; /* Posición fija */
+    padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Algura completa */
+    background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+    text-align: center;
+}
+.modal_input{
+    border: none;
+    border-bottom: 2px solid #D96281;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    width: 25rem;
+    transition: all 0.3s ease-in-out;
+    margin: 0.5rem;
+}
+.modal_input:focus{
+    outline: none;
+    background-color: var(--focus-bg-color);
+}
+.modal_content{
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto; /* Centrada */
+    padding: 20px;
+    width: 60%;
+    border-radius: 0.5rem;
+}
+.close_modal{
+    position: absolute;
+    right: 2rem;
+    border: none;
+    border-radius: 2rem;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    background-color: #D96281;
+}
+.close_modal:hover{
+    background-color: #EC2634;
+}
+#add_edited_task{
+    padding: 0.5rem;
+    background-color: #70BF5A;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#add_edited_task:hover{
+    background-color: #97DB78;
+}
